@@ -2,6 +2,7 @@
 
 <h1>Sending Mail to User</h1>
 <p>I have used PHP Mailer to sending Email</p>
+<img src="Images/email.JPG" />
 <br />
 <h1>MySQL File</h1>
 <p> I have attached the sql file which has the sample data which were stored into database while testing</p>
