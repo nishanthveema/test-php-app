@@ -21,7 +21,11 @@ $validateData = $signup->formValidation();
 $arr = array();
 if ($validateData['valid']) {
     //if the valdation is successfull, store the data to user, send confirmation emails and show successful message to users
-    $insertData = $signup->storeData();
+    $store = $insertData = $signup->storeData();
+    if($store['msg'] === 'success')
+    {
+        CommonService::send_email($name, $email);
+    }
     CommonService::send_email($name, $email);
     $arr = array('msg' => 'success', 'data' => 'Data has been inserted successfully!!');
 } else {

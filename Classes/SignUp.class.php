@@ -95,9 +95,12 @@ class SignUp extends DbConn
         $sql = "INSERT INTO users(name,email,password,created_at) VALUES('$name','$email','$password','$createdAt')";
         $result = mysqli_query($dbConnection, $sql);
         if (!$result) {
-            die('Query Failed!! please try again later ' . $dbConnection->connect_error);
+            $arr = array('msg' => 'failed', 'data' => $dbConnection->error);
+            // echo ('Query Failed!! please try again later ' . $dbConnection->error);
+            // exit();
         } else {
-            return true;
+            $arr = array('msg' => 'success', 'data' => 'Data has been inserted successfully!!');
         }
+        return $arr;
     }
 }

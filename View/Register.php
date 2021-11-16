@@ -17,7 +17,7 @@ include "../Classes/CommonService.class.php";
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid d-flex justify-content-end">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">TEST MENU</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -95,7 +95,7 @@ include "../Classes/CommonService.class.php";
                     for ($i = 0; $i < count($data); $i++) {
                     ?>
                         <div class="carousel-item <?php if ($i === 0) echo 'active' ?>">
-                            <img src="<?php echo $data[$i]['image_url'] ?>" class="d-block w-100 h" alt="..." style="height: 500px;">
+                            <img src="<?php echo $data[$i]['image_url'] ?>" class="d-block w-100" alt="..." style="height: 500px;">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5><?php echo $data[$i]['location'] ?></h5>
                                 <p><?php echo $data[$i]['title'] ?></p>
@@ -116,6 +116,7 @@ include "../Classes/CommonService.class.php";
         </div>
 
     </main>
+    
 </body>
 <script src="../Scripts/signup.js"></script>
 

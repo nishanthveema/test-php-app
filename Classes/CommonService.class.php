@@ -56,8 +56,8 @@ class CommonService
         $mail->Port = 587;
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
-        $mail->Username = 'akveemarajan@gmail.com';
-        $mail->Password = 'vEEMA195360';
+        $mail->Username = 'xxxxxxxxxx@xxxxx.com';
+        $mail->Password = 'xxxxxxxxxxxxxx';
 
         $mail->setFrom('confirmation@testemail.com', 'Registration Confirmation Email');
         $mail->addAddress($email, 'User');
